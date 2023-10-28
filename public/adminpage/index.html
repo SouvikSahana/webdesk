@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Define a template for product information -->
+    <template id="productTemplate">
+        <div class="container">
+        <div class="product">
+            <p id="deleteThis" onclick="deleteItem(this)"><img src="./deleteRed.png" alt="delete" id="deleteItem"><span id="productName"></span></p>
+            <p><span id="price-icon">₹ </span><span id="price"></span> <span id="mrp"></span></p>
+            <p style="margin-top: 10px;margin-bottom: 2px;"> <span id="companyName"></span> * <span id="count"></span> <Span id="countUnit"></Span> * <span id="warranty"></span></p>
+            <p><span id="productDetail"></span></p>
+        </div>
+        <div class="visible">
+            <img src="" alt="" id="image">
+        </div>
+    </div>
+    </template>
+
+    <div id="productContainer">
+        <!-- This is where the product templates will be inserted -->
+    </div>
+
+    <!-- add Item button -->
+    <button class="add-item-button" onclick="window.location.assign('../additem')">
+        <div class="plus">+</div>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="containerHeader">
+            <h2>Add Item</h2>
+        </div>
+        <form action="/additem" method="post" enctype="multipart/form-data">
+            <div class="inputField">
+                <label for="product_name">Product Name: <span style="color: red;">*</span></label>
+                <input type="text" id="product_name" name="product_name" required>
+            </div>
+            <div class="inputField">
+                <label for="product_detail">Product Details:<span style="color: red;">*</span> </label>
+                <textarea name="product_detail" id="product_detail" cols="30" rows="5" required></textarea>
+            </div>
+            <div class="inputField">
+                <label for="company_name">Company Name:<span style="color: red;">*</span> </label>
+                <input type="text" id="company_name" name="company_name" required>
+            </div>
+            <div class="inputField">
+                <label for="warranty">Warranty: </label>
+                <input type="text" id="warranty" name="warranty">
+            </div>
+            <div class="inputField">
+                <label for="mrp">M.R.P:<span style="color: red;">*</span> </label>
+                <input type="number" name="mrp" id="mrp" required>
+            </div>
+            <div class="inputField">
+                <label for="price">Your Price: </label>
+                <input type="number" id="price" name="price">
+            </div>
+            <div class="inputField">
+                <label for="images">Images (multiple): </label>
+                <input type="file" name="images" id="images" multiple accept="image/*">
+                <div id="imageContainer">
+                    <!-- Here selected images will be displayed -->
+                </div>
+            </div>
+            <div class="inputField">
+                <label for="count">Count of Product:<span style="color: red;">*</span> </label>
+                <input type="number" id="count" name="count" required>
+            </div>
+            <!-- <div class="inputField">
+                <label for="">Tags: </label>
+            </div> -->
+            <div class="submitField">
+                <input type="submit" value="Submit" id="submit">
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

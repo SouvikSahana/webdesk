@@ -1,0 +1,84 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 10px 2px grey;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.product{
+    /* flex: 0.7; */
+    padding: 5px 10px;
+}
+.product>p{
+    padding: 0;
+    margin: 0;
+}
+#productName{
+    font-size: 25px;
+}
+#count{
+    font-size: 15px;
+}
+#price-icon{
+    /* font-size: 25px; */
+    color: blue;
+}
+#mrp{
+    font-size: 15px;
+    text-decoration: line-through;
+}
+#companyName{
+    padding: 2px 5px;
+border: none;
+background-color: bisque;
+border-radius: 8px;
+}
+#productDetail{
+    font-size: 15px;
+}
+.visible{
+    /* flex: 0.3; */
+}
+.visible>img{
+    width: 120px;
+    object-fit: cover;
+    height: 120px;
+    padding: 5px;
+}
+#productContainer{
+    /* background-color: red; */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#deleteItem{
+    width: 17px;
+    height: 17px;
+}
+#deleteThis{
+    cursor: pointer;
+}
+
+.add-item-button {
+    background-color: #5b4caf; 
+    color: white;
+    border: none; 
+    padding: 20px; 
+    cursor: pointer; 
+    border-radius: 50%; 
+    font-size: 24px; 
+    width: 100px; 
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+}
+
+.plus {
+    font-size: 86px;
+}
