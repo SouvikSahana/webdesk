@@ -35,7 +35,7 @@ router.post("/additem",upload.array('images',10),async(req,res)=>{
         images: imageFile
     });
     const response=await item.save()
-    res.redirect("/adminpage")
+    res.redirect("/")
     }catch(error){
         res.redirect("/additem")
     }

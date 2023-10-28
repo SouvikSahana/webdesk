@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/login",express.static("./public/login"))
 app.use("/additem",express.static("./public/addItem"))
-app.use("/adminpage",express.static("./public/adminpage"))
+app.use("/",express.static("./public/adminpage"))
 
 app.use(router)
 app.listen(port,()=>{
