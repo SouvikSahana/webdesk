@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+   <!-- Search button -->
+   <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search Product">
+    <button id="search-button" onclick="clearSearchField()">X</button>
+
+  </div>
+    <!-- Define a template for product information -->
+    <template id="productTemplate">
+        <div class="container" onclick="redirectItem(this)">
+            <div class="visible">
+                <img src="" alt="" id="image">
+            </div>
+        <div class="product">
+            <p id="deleteThis"><span id="productName"></span></p>
+            <p><span id="price-icon">₹ </span><span id="price"></span> <span id="mrp"></span>  </p>
+            <p id="company"><span id="companyName"></span></p>
+            <p style="margin-top: 10px;margin-bottom: 2px;" id="oneLineData"><span id="count"></span> <Span id="countUnit"></Span> * <span id="warranty"></span></p>
+            <!-- <p><span id="productDetail"></span></p> -->
+        </div>
+        
+    </div>
+    </template>
+
+    <div id="productContainer">
+        <!-- This is where the product templates will be inserted -->
+    </div>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>

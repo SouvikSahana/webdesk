@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-detail {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.company-name {
+    font-size: 16px;
+}
+
+.warranty {
+    font-size: 14px;
+}
+
+.price-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mrp {
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 20px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.count {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* image sliding */
+.image-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Slider content styles */
+.images {
+    max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+
+.image {
+    max-width: 300px;
+    height: 300px;
+    /* display: none; */
+    vertical-align: middle;
+}
+/* Allow user scrolling */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next {font-size: 11px}
+  }

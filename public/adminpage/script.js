@@ -5,12 +5,13 @@ const productContainer = document.getElementById('productContainer');
 async function getItemData(){
     const response=await fetch("/getitems")
     const data=await response.json()
-
     data.forEach(product => {
         const clone = document.importNode(productTemplate.content, true);
     // console.log(product._id)
     const deleteId=document.createElement("div")
     deleteId.setAttribute("id",product._id)
+
+        clone.querySelector(".visible").setAttribute("id",product._id)
 
         clone.querySelector('#companyName').textContent = product.company_name;
         clone.querySelector('#count').textContent = product.count || "Out of Stock";
@@ -50,4 +51,8 @@ async function deleteItem(a){
             alert(data.message)
         }
     }
+}
+
+async function updateItem(item){
+    window.location.assign("../additem?id="+item.id)
 }

@@ -5,7 +5,8 @@ require("dotenv").config()
 
 mongoose.set('strictQuery',false)
 
-const uri="mongodb://127.0.0.1:27017/MyDatabase?retryWrites=true&w=majority"
+// const uri="mongodb://127.0.0.1:27017/MyDatabase?retryWrites=true&w=majority"
+const uri=`mongodb+srv://${process.env.mongo_user}:${process.env.mongo_pass}@sahana.v2ancuf.mongodb.net/?retryWrites=true&w=majority`
 mongoose.connect(uri,{useNewUrlParser:true, useUnifiedTopology: true})
 
 const userSchema=new mongoose.Schema({

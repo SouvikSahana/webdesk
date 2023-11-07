@@ -29,14 +29,23 @@ router.post("/additem",upload.array('images',10),async(req,res)=>{
             .toBuffer();
         return { image: buffer };
     }));
-
-    const item = new Item({
-        ...req.body,
-        images: imageFile
-    });
-    const response=await item.save()
-    res.redirect("/")
+    if(req.body._id){
+        const {_id,...newObject}=req.body
+        const response=await Item.findByIdAndUpdate({_id:_id},{
+            ...newObject,
+            images: imageFile
+        })
+    }else{
+        const item = new Item({
+            ...req.body,
+            images: imageFile
+        });
+        const response=await item.save()
+    }
+    
+    res.redirect("/adminpage")
     }catch(error){
+        console.log(error)
         res.redirect("/additem")
     }
 })
@@ -52,6 +61,15 @@ router.get("/deleteitem/:id",async(req,res)=>{
     try{
         const id=req.params.id
         const response= await Item.findByIdAndDelete(id)
+        res.json(response)
+    }catch(error){
+        res.json({message: error.message})
+    }
+})
+router.get("/getitem/:id",async(req,res)=>{
+    try{
+        const id=req.params.id
+        const response=await Item.findById(id)
         res.json(response)
     }catch(error){
         res.json({message: error.message})
